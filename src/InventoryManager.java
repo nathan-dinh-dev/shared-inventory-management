@@ -1,7 +1,15 @@
-
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
+/**
+ * InventoryManager manages a shared inventory for a warehouse with limited space.
+ * It allows supplier threads to add items and customer threads to remove items while
+ * maintaining thread safety with ReentrantLock and condition variables.
+ *
+ * Programmed by Nathan Dinh
+ * Date: 10/31/2024
+ */
 
 public class InventoryManager {
     private int inventory = 0;
